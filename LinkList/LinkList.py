@@ -3,87 +3,58 @@
 
 
 class Node(object):
-    def __init__(self, val, pnext=None):
-        self.data = val
-        self.next = pnext
+    '''
+    data: 节点保存的数据
+    _next: 保存下一个节点对象
+    '''
+    def __init__(self,data,pnext=None):
+        self.data = data
+        self._next = pnext
 
+    def __repr__(self):
+        '''
+        用来定义None的字符输出
+        print为输出data
+        '''
+        return str(self.data)
 
-class LinkList(object):
+class SingleList(object):
     def __init__(self):
-        self.head = 0
+        self.head = None
+        self.length = 0
 
-    def __getitem__(self, key):
-        if self.is_empty():
-            print('LinkList is empty!')
-            return
-        elif key < 0 or key > self.getlength():
-            print('the key is error!')
-            return
-        else:
-            self.getitem(key)
+    def inEmpty(self):
+        pass
 
-    def __setitem__(self, key, value):
-        if self.getlength() == 0:
-            print('LinkList is empty!')
-            return
-        elif key < 0 or key > self.getlength():
-            print('the key is error!')
-            return
-        else:
-            self.delete(key)
-            return self.insert(key)
+    def append(self,dataOrNode):
+        pass
 
-    def initlist(self, data):
-        self.head = Node(data[0])
+    def delete(self,index):
+        pass
 
-        p = self.head
+    def insert(self,index,dataOrNode):
+        pass
 
-        for i in data[1:]:
-            node = Node(i)
-            p.next = node
-            p = p.next
+    def update(self,index,data):
+        pass
 
-    def getlength(self):
-        p = self.head
-        length = 0
-        while p is not None:
-            length += 1
-            p = p.next
+    def getItem(self,index):
+        pass
 
-        return length
-
-    def is_empty(self):
-        if self.getlength() == 0:
-            return True
-        else:
-            return False
+    def getIndex(self,data):
+        pass
 
     def clear(self):
-        self.head = 0
-
-    def append(self, item):
-        node = Node(item)
-        if not self.head:
-            self.head = node
-        else:
-            p = self.head
-            while p.next:
-                p = p.next
-            p.next = node
-
-    def getitem(self, index):
         pass
 
-    def insert(self):
+    def __repr__(self):
         pass
 
-    def delete(self, index):
-        if self.is_empty():
-            print('LinkList is empty!')
-            return
-
-        if index < 0 or index > self.getlength():
-            pass
-
-    def index(self):
+    def __getitem__(self, ind):
         pass
+
+    def __setitem__(self, ind, value):
+        pass
+
+    def __len__(self):
+        return self.length
