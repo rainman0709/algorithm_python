@@ -161,7 +161,7 @@ class SingleList(object):
         node = self.head
         nlist = ''
         while node:
-            nlist += str(node.data) + ''
+            nlist += str(node.data) + ' '
             node = node._next
         return nlist
 
