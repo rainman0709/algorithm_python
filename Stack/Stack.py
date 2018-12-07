@@ -17,11 +17,11 @@ class Stack(object):
             self.stack.append(data)
             self.top += 1
 
-    def pop(self, data):
+    def pop(self):
         if self.isempty():
             raise Exception('the stack is empty!')
         else:
-            self.stack.pop(data)
+            self.stack.pop()
             self.top -= 1
 
     def isfull(self):
