@@ -11,3 +11,6 @@ my_queue.showQueue()
 my_queue.dequeue()
 
 my_queue.showQueue()
+
+my_queue.dequeue()
+my_queue.dequeue()
