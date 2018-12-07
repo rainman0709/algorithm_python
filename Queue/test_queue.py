@@ -14,3 +14,5 @@ my_queue.showQueue()
 
 my_queue.dequeue()
 my_queue.dequeue()
+
+print(my_queue.isempty())
