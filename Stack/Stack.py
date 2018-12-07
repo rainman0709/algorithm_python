@@ -1,9 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-
-
-
 class Stack(object):
     def __init__(self, size):
         self.stack = []

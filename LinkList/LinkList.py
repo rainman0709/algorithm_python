@@ -1,7 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-
 class Node(object):
     '''
     data: 节点保存的数据
